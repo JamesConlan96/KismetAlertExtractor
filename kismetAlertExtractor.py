@@ -25,7 +25,8 @@ def genArgParser() -> argparse.ArgumentParser:
         "kismet.alert.frequency",
         "kismet.alert.channel",
     ]
-    parser = argparse.ArgumentParser(description="Kismet alert extractor")
+    parser = argparse.ArgumentParser(description="Kismet alert extractor",
+                                     prog=str(Path(__file__).name))
     parser.add_argument("-f", "--fields", nargs="+", metavar="FIELD",
                         choices=list(kismetFields.keys()),
                         default=defaultFields,
