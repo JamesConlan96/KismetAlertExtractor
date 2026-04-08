@@ -33,3 +33,6 @@ issues = "https://github.com/JamesConlan96/WiSite/KismetAlertExtractor"
 
 [project.scripts]
 kismetalertextractor = "kismetAlertExtractor:main"
+
+[tool.setuptools]
+py-modules = ["kismetAlertExtractor"]
