@@ -11,8 +11,8 @@ It is recommended to install KismetAlertExtractor using [pipx](https://pipx.pypa
 ## Usage
 
 ```
-usage: kismetAlertExtractor.py [-h] [-f FIELD [FIELD ...]] [-i FILE [FILE ...]] [-l] [-o FILE]
-                               [-s {asciidoc,double_grid,double_outline,fancy_grid,fancy_outline,github,grid,heavy_grid,heavy_outline,html,jira,latex,latex_booktabs,latex_longtable,latex_raw,mediawiki,mixed_grid,mixed_outline,moinmoin,orgtbl,outline,pipe,plain,presto,pretty,psql,rounded_grid,rounded_outline,rst,simple,simple_grid,simple_outline,textile,tsv,unsafehtml,youtrack}]
+usage: kismetAlertExtractor.py [-h] [-f FIELD [FIELD ...]] [-i FILE [FILE ...]] [-l] [-n] [-o FILE]
+                               [-s {asciidoc,colon_grid,double_grid,double_outline,fancy_grid,fancy_outline,github,grid,heavy_grid,heavy_outline,html,jira,latex,latex_booktabs,latex_longtable,latex_raw,mediawiki,mixed_grid,mixed_outline,moinmoin,orgtbl,outline,pipe,plain,presto,pretty,psql,rounded_grid,rounded_outline,rst,simple,simple_grid,simple_outline,textile,tsv,unsafehtml,youtrack}]
 
 Kismet alert extractor
 
@@ -24,8 +24,9 @@ options:
   -i, --inputFiles FILE [FILE ...]
                         kismet file(s) to extract alerts from
   -l, --listFields      list supported kismet alert fields
+  -n, --noPrompt        overwrite existing output files without asking
   -o, --outputFile FILE
                         file to save alerts to
-  -s, --style {asciidoc,double_grid,double_outline,fancy_grid,fancy_outline,github,grid,heavy_grid,heavy_outline,html,jira,latex,latex_booktabs,latex_longtable,latex_raw,mediawiki,mixed_grid,mixed_outline,moinmoin,orgtbl,outline,pipe,plain,presto,pretty,psql,rounded_grid,rounded_outline,rst,simple,simple_grid,simple_outline,textile,tsv,unsafehtml,youtrack}
+  -s, --style {asciidoc,colon_grid,double_grid,double_outline,fancy_grid,fancy_outline,github,grid,heavy_grid,heavy_outline,html,jira,latex,latex_booktabs,latex_longtable,latex_raw,mediawiki,mixed_grid,mixed_outline,moinmoin,orgtbl,outline,pipe,plain,presto,pretty,psql,rounded_grid,rounded_outline,rst,simple,simple_grid,simple_outline,textile,tsv,unsafehtml,youtrack}
                         style for output tables (default: github)
 ```

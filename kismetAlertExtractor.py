@@ -37,6 +37,8 @@ def genArgParser() -> argparse.ArgumentParser:
                         help="kismet file(s) to extract alerts from")
     parser.add_argument("-l", "--listFields", action="store_true",
                         help="list supported kismet alert fields")
+    parser.add_argument('-n', '--noPrompt', action="store_true",
+                        help="overwrite existing output files without asking")
     parser.add_argument("-o", "--outputFile", type=Path, action="store",
                         metavar="FILE", help="file to save alerts to")
     parser.add_argument('-s', '--style', choices=tabulate_formats,
@@ -72,7 +74,7 @@ def _validateArgs(args: argparse.Namespace) -> None:
     for inFile in args.inputFiles:
         if not inFile.exists:
             sys.exit(f"Input file '{inFile}' does not exist")
-    if args.outputFile.exists():
+    if args.outputFile.exists() and not args.noPrompt:
         if not _yesNo(f"Output file '{args.outputFile}' exists, overwrite it?"):
             sys.exit()
         try:
